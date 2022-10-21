@@ -36,7 +36,7 @@ def clean_data():
 
     #reemplazar guiones por espacios
     df["idea_negocio"] = df["idea_negocio"].apply(lambda x: str(x).replace("-"," ").replace("_"," ").strip())
-    df["barrio"] = df["barrio"].apply(lambda x: str(x).replace("-"," ").replace("_"," ").strip())
+    df["barrio"] = df["barrio"].apply(lambda x: str(x).lower().replace("_"," ").replace("-"," "))
     df["línea_credito"] = df["línea_credito"].apply(lambda x: str(x).lower().replace("-", " ").replace("_", " ").strip())
 
     #modificar formato fecha
