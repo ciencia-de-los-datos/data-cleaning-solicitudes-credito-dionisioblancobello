@@ -47,6 +47,7 @@ def clean_data():
     
     #eliminar columna Unnamed del dataFrame
     df.drop(['Unnamed: 0'], axis=1,inplace=True)
+    
     df.drop_duplicates(inplace=True)
     df.dropna(inplace=True)
 
